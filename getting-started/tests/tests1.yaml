@@ -1,0 +1,9 @@
+- vars:
+    language:
+      - French
+      - German
+      - Spanish
+    input:
+      - 'Hello world'
+      - 'Good morning'
+      - 'How are you?'

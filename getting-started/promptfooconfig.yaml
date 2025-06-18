@@ -1,0 +1,81 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+# description: 'Getting started'
+description: "Loading tests from CSV"
+
+
+# Optionally set API keys here instead of exporting environment variables.
+# Never commit real keys to source control.
+# env:
+#   OPENAI_API_KEY: sk-...
+prompts:
+  # - 'Convert this English to {{language}}: {{input}}'
+  # - 'Translate to {{language}}: {{input}}'
+  # - file://prompt1.txt
+  # - file://prompt2.txt
+  # - file://prompt.txt
+  # - file://multiple_variables_prompt.txt
+  # - file://manipulating_objects_prompt.txt
+
+  # - 'Summarize the following text in {{topic_length}} words: {{processed_content}}'
+
+  - file://prompt1.txt
+  - file://prompt2.txt
+
+providers:
+  # - google:gemini-2.0-flash-exp
+  # - google:gemini-1.5-flash
+  - file://provider1.yaml
+  - file://provider2.yaml
+
+# defaultTest:
+#   options:
+#     transformVars: |
+#       return {
+#         uppercase_topic: vars.topic.toUpperCase(),
+#         topic_length: vars.topic.length,
+#         processed_content: vars.content.trim()
+#       };
+
+tests:
+  # - file://tests/tests2.yaml
+  # - vars:
+  #     language: French
+  #     input: Hello world
+  #   assert:
+  #     - type: javascript
+  #       value: output.toLowerCase().includes('bonjour')
+  # - vars:
+  #     language: Spanish
+  #     input: Where is the library?
+  #   assert:
+  #     - type: javascript
+  #       value: output.toLowerCase().includes('biblioteca')
+
+  # - vars:
+  #     input: Hello world
+  #     context: file://fetch_dynamic_context.py
+  #   assert:
+  #     - type: javascript
+  #       value: output.toLowerCase().includes('hello')
+
+  # - file://tests/tests1.yaml
+  # - vars:
+  #     user_profile:
+  #       name: John Doe
+  #       interests:
+  #         - reading
+  #         - gaming
+  #         - hiking
+  #     recent_activity:
+  #       type: reading
+  #       details:
+  #         title: 'The Great Gatsby'
+  #         author: 'F. Scott Fitzgerald'
+  #   options:
+  #     transform: output.toUpperCase()
+
+  # - vars:
+  #     topic: 'environment'
+  #     content: '   This article discusses the effects of deforestation on biodiversity.   '
+
+  - file://tests/tests.csv

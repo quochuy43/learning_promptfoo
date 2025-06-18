@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Manipulating objects</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>recent_activity</th>
+        
+        <th>user_profile</th>
+        
+        <th>[google:gemini-2.0-flash] manipulating_objects_prompt.txt: User Profile:
+- Name: {{ user_profile.name }}
+- Interests: {{ user_profile.interests | join(', ') }}
+- Recent Activity: {{ recent_activity.type }} on "{{ recent_activity.details.title }}" by {{ recent_activity.details.author }}
+
+Based on the above user profile, generate a personalized reading recommendation list that includes books similar to "{{ recent_activity.details.title }}" and aligns with the user's interests.</th>
+        
+        <th>[google:gemini-1.5-flash] manipulating_objects_prompt.txt: User Profile:
+- Name: {{ user_profile.name }}
+- Interests: {{ user_profile.interests | join(', ') }}
+- Recent Activity: {{ recent_activity.type }} on "{{ recent_activity.details.title }}" by {{ recent_activity.details.author }}
+
+Based on the above user profile, generate a personalized reading recommendation list that includes books similar to "{{ recent_activity.details.title }}" and aligns with the user's interests.</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="[object Object]">[object Object]</td>
+          
+          <td data-content="[object Object]">[object Object]</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Okay, here&#39;s a personalized reading recommendation list for John Doe, based on his interest in &quot;The Great Gatsby&quot; and his general interests in reading, gaming, and hiking:
+
+**Focusing on Similarities to &quot;The Great Gatsby&quot; (Themes, Style, Era):**
+
+*   **&quot;Tender is the Night&quot; by F. Scott Fitzgerald:** A natural follow-up, exploring similar themes of wealth, disillusionment, and the American expatriate experience in the Jazz Age. It&#39;s a bit darker and more complex than Gatsby, which might appeal to someone who enjoyed the depth of the original.
+
+*   **&quot;Brideshead Revisited&quot; by Evelyn Waugh:** Explores themes of class, religion, and lost innocence in pre-war England. The prose is beautiful, and the story is filled with memorable characters and a sense of nostalgia, similar to Gatsby.
+
+*   **&quot;The Age of Innocence&quot; by Edith Wharton:** A poignant story of love and societal constraints in Gilded Age New York. It offers a critical look at the wealthy elite and the sacrifices they make to maintain their status, echoing Gatsby&#39;s critique of the nouveau riche.
+
+*   **&quot;A Tree Grows in Brooklyn&quot; by Betty Smith:** While not about the wealthy, this novel captures the struggles and dreams of an immigrant family in early 20th-century Brooklyn. It shares Gatsby&#39;s themes of ambition, the pursuit of the American Dream, and the contrast between appearances and reality.
+
+**Incorporating Hiking Interest (Adventure, Nature, Self-Discovery):**
+
+*   **&quot;Into the Wild&quot; by Jon Krakauer:** A non-fiction account of Chris McCandless&#39;s journey into the Alaskan wilderness. This book explores themes of self-reliance, the allure of nature, and the dangers of idealism, which might resonate with someone who enjoys hiking and introspection. *Note: This book has a tragic ending, so be mindful of that if John prefers lighter reads.*
+
+*   **&quot;Wild: From Lost to Found on the Pacific Crest Trail&quot; by Cheryl Strayed:** A memoir about a woman who hikes the Pacific Crest Trail to cope with personal tragedy. It&#39;s a story of resilience, self-discovery, and the healing power of nature.
+
+*   **&quot;A Walk in the Woods&quot; by Bill Bryson:** A humorous and informative account of Bryson&#39;s attempt to hike the Appalachian Trail. It combines adventure with witty observations about nature, history, and human nature.
+
+**Incorporating Gaming Interest (Strategy, Intrigue, Complex Characters):**
+
+*   **&quot;American Gods&quot; by Neil Gaiman:** A fantasy novel that blends mythology, road trip adventure, and social commentary. The complex characters, intricate plot, and exploration of power dynamics might appeal to a gamer&#39;s strategic thinking.
+
+*   **&quot;Ready Player One&quot; by Ernest Cline:** A science fiction novel set in a virtual reality world. It&#39;s filled with pop culture references and a quest that requires strategic thinking and problem-solving, similar to many video games.
+
+*   **&quot;The Lies of Locke Lamora&quot; by Scott Lynch:** A fantasy novel about a group of con artists in a Venice-like city. It features intricate plots, clever schemes, and morally ambiguous characters, which could appeal to someone who enjoys strategy and role-playing games.
+
+**Bonus Recommendation (Combining Multiple Interests):**
+
+*   **&quot;The Secret History&quot; by Donna Tartt:** A group of Classics students at an elite New England college become involved in a dark and dangerous secret. It combines literary themes, a sense of mystery and intrigue, and a setting that evokes a sense of place and atmosphere. The characters are complex and flawed, and the story explores themes of beauty, morality, and the consequences of our actions. This could appeal to John&#39;s interest in reading, and the dark mystery could connect to the intrigue found in some games.
+
+**Why these recommendations are tailored:**
+
+*   **&quot;Gatsby&quot; as a Starting Point:** The list directly addresses John&#39;s recent reading by suggesting books with similar themes, writing styles, and historical contexts.
+*   **Interest Integration:** The recommendations actively incorporate his interests in hiking and gaming, providing a diverse range of options.
+*   **Variety:** The list includes both fiction and non-fiction, classic and contemporary works, to cater to different reading preferences.
+
+This list provides a good starting point for John&#39;s next reading adventure. He can explore the descriptions and reviews of each book to find the one that best suits his current mood and preferences.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Okay, here's a personalized reading recommendation list for John Doe, based on his interest in "The Great Gatsby" and his general interests in reading, gaming, and hiking:
+
+**Focusing on Similarities to "The Great Gatsby" (Themes, Style, Era):**
+
+*   **"Tender is the Night" by F. Scott Fitzgerald:** A natural follow-up, exploring similar themes of wealth, disillusionment, and the American expatriate experience in the Jazz Age. It's a bit darker and more complex than Gatsby, which might appeal to someone who enjoyed the depth of the original.
+
+*   **"Brideshead Revisited" by Evelyn Waugh:** Explores themes of class, religion, and lost innocence in pre-war England. The prose is beautiful, and the story is filled with memorable characters and a sense of nostalgia, similar to Gatsby.
+
+*   **"The Age of Innocence" by Edith Wharton:** A poignant story of love and societal constraints in Gilded Age New York. It offers a critical look at the wealthy elite and the sacrifices they make to maintain their status, echoing Gatsby's critique of the nouveau riche.
+
+*   **"A Tree Grows in Brooklyn" by Betty Smith:** While not about the wealthy, this novel captures the struggles and dreams of an immigrant family in early 20th-century Brooklyn. It shares Gatsby's themes of ambition, the pursuit of the American Dream, and the contrast between appearances and reality.
+
+**Incorporating Hiking Interest (Adventure, Nature, Self-Discovery):**
+
+*   **"Into the Wild" by Jon Krakauer:** A non-fiction account of Chris McCandless's journey into the Alaskan wilderness. This book explores themes of self-reliance, the allure of nature, and the dangers of idealism, which might resonate with someone who enjoys hiking and introspection. *Note: This book has a tragic ending, so be mindful of that if John prefers lighter reads.*
+
+*   **"Wild: From Lost to Found on the Pacific Crest Trail" by Cheryl Strayed:** A memoir about a woman who hikes the Pacific Crest Trail to cope with personal tragedy. It's a story of resilience, self-discovery, and the healing power of nature.
+
+*   **"A Walk in the Woods" by Bill Bryson:** A humorous and informative account of Bryson's attempt to hike the Appalachian Trail. It combines adventure with witty observations about nature, history, and human nature.
+
+**Incorporating Gaming Interest (Strategy, Intrigue, Complex Characters):**
+
+*   **"American Gods" by Neil Gaiman:** A fantasy novel that blends mythology, road trip adventure, and social commentary. The complex characters, intricate plot, and exploration of power dynamics might appeal to a gamer's strategic thinking.
+
+*   **"Ready Player One" by Ernest Cline:** A science fiction novel set in a virtual reality world. It's filled with pop culture references and a quest that requires strategic thinking and problem-solving, similar to many video games.
+
+*   **"The Lies of Locke Lamora" by Scott Lynch:** A fantasy novel about a group of con artists in a Venice-like city. It features intricate plots, clever schemes, and morally ambiguous characters, which could appeal to someone who enjoys strategy and role-playing games.
+
+**Bonus Recommendation (Combining Multiple Interests):**
+
+*   **"The Secret History" by Donna Tartt:** A group of Classics students at an elite New England college become involved in a dark and dangerous secret. It combines literary themes, a sense of mystery and intrigue, and a setting that evokes a sense of place and atmosphere. The characters are complex and flawed, and the story explores themes of beauty, morality, and the consequences of our actions. This could appeal to John's interest in reading, and the dark mystery could connect to the intrigue found in some games.
+
+**Why these recommendations are tailored:**
+
+*   **"Gatsby" as a Starting Point:** The list directly addresses John's recent reading by suggesting books with similar themes, writing styles, and historical contexts.
+*   **Interest Integration:** The recommendations actively incorporate his interests in hiking and gaming, providing a diverse range of options.
+*   **Variety:** The list includes both fiction and non-fiction, classic and contemporary works, to cater to different reading preferences.
+
+This list provides a good starting point for John's next reading adventure. He can explore the descriptions and reviews of each book to find the one that best suits his current mood and preferences.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Personalized Reading Recommendations for John Doe:
+
+**Similar to &quot;The Great Gatsby&quot; (Jazz Age, American Classics, Themes of Wealth &amp; Morality):**
+
+1. **Tender is the Night by F. Scott Fitzgerald:**  Another Fitzgerald masterpiece exploring themes of love, loss, and the disillusionment of the wealthy class in the Jazz Age.  It offers a similar stylistic flair and captivating narrative.
+
+2. **This Side of Paradise by F. Scott Fitzgerald:**  Fitzgerald&#39;s debut novel, offering a glimpse into the roaring twenties and the lives of young, ambitious individuals navigating wealth, love, and societal expectations.
+
+3. **The Age of Innocence by Edith Wharton:**  A compelling novel exploring the rigid social structures and moral complexities of New York&#39;s high society in the Gilded Age, offering a similar focus on wealth and societal constraints.
+
+4. **A Farewell to Arms by Ernest Hemingway:**  While different in tone, this Hemingway classic shares the setting (post-WWI era) and explores themes of love and disillusionment amidst a backdrop of societal upheaval.
+
+
+**Aligning with John&#39;s other Interests (Gaming &amp; Hiking):**
+
+5. **Ready Player One by Ernest Cline:**  A fun, fast-paced novel incorporating 80s pop culture and gaming references, appealing to John&#39;s gaming interest.
+
+6. **Into the Wild by Jon Krakauer:**  A true story about a young man&#39;s journey into the Alaskan wilderness, appealing to John&#39;s hiking interest and offering a compelling narrative.  (Note: This is a departure from the Gatsby style, but caters to his interests).
+
+7. **The Alchemist by Paulo Coelho:**  A philosophical novel about a shepherd&#39;s journey of self-discovery, offering a blend of adventure and introspection that might appeal to both his hiking and reading interests.
+
+
+This list offers a balance between books similar to &quot;The Great Gatsby&quot; and books catering to John&#39;s other interests, providing a diverse yet personalized reading experience.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Personalized Reading Recommendations for John Doe:
+
+**Similar to "The Great Gatsby" (Jazz Age, American Classics, Themes of Wealth & Morality):**
+
+1. **Tender is the Night by F. Scott Fitzgerald:**  Another Fitzgerald masterpiece exploring themes of love, loss, and the disillusionment of the wealthy class in the Jazz Age.  It offers a similar stylistic flair and captivating narrative.
+
+2. **This Side of Paradise by F. Scott Fitzgerald:**  Fitzgerald's debut novel, offering a glimpse into the roaring twenties and the lives of young, ambitious individuals navigating wealth, love, and societal expectations.
+
+3. **The Age of Innocence by Edith Wharton:**  A compelling novel exploring the rigid social structures and moral complexities of New York's high society in the Gilded Age, offering a similar focus on wealth and societal constraints.
+
+4. **A Farewell to Arms by Ernest Hemingway:**  While different in tone, this Hemingway classic shares the setting (post-WWI era) and explores themes of love and disillusionment amidst a backdrop of societal upheaval.
+
+
+**Aligning with John's other Interests (Gaming & Hiking):**
+
+5. **Ready Player One by Ernest Cline:**  A fun, fast-paced novel incorporating 80s pop culture and gaming references, appealing to John's gaming interest.
+
+6. **Into the Wild by Jon Krakauer:**  A true story about a young man's journey into the Alaskan wilderness, appealing to John's hiking interest and offering a compelling narrative.  (Note: This is a departure from the Gatsby style, but caters to his interests).
+
+7. **The Alchemist by Paulo Coelho:**  A philosophical novel about a shepherd's journey of self-discovery, offering a blend of adventure and introspection that might appeal to both his hiking and reading interests.
+
+
+This list offers a balance between books similar to "The Great Gatsby" and books catering to John's other interests, providing a diverse yet personalized reading experience.
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

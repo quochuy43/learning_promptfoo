@@ -1,0 +1,5 @@
+Given the following context:
+{{context}}
+
+Please translate the following input:
+{{input}}

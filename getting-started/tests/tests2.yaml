@@ -1,0 +1,6 @@
+- vars:
+    language: French
+    input: How r u?
+- vars:
+    language: Spanish
+    input: My name is Huy

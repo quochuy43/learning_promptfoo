@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Loading tests from CSV</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>input</th>
+        
+        <th>language</th>
+        
+        <th>[google:gemini-2.0-flash] prompt1.txt: Convert this English to {{language}}: {{input}}</th>
+        
+        <th>[google:gemini-2.0-flash] prompt2.txt: Translate to {{language}}: {{input}}</th>
+        
+        <th>[google:gemini-1.5-flash] prompt1.txt: Convert this English to {{language}}: {{input}}</th>
+        
+        <th>[google:gemini-1.5-flash] prompt2.txt: Translate to {{language}}: {{input}}</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="Hello world">Hello world</td>
+          
+          <td data-content="Vietnamese">Vietnamese</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and direct translation of &quot;Hello world&quot; to Vietnamese is:
+
+**Chào thế giới**
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+The most common and direct translation of "Hello world" to Vietnamese is:
+
+**Chào thế giới**
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and direct translation of &quot;Hello world&quot; to Vietnamese is:
+
+**Chào thế giới**
+
+This is the standard and widely understood translation.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+The most common and direct translation of "Hello world" to Vietnamese is:
+
+**Chào thế giới**
+
+This is the standard and widely understood translation.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Xin chào thế giới
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Xin chào thế giới
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Xin chào thế giới
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Xin chào thế giới
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Good morning">Good morning</td>
+          
+          <td data-content="French">French</td>
+          
+          <td data-content="[PASS] (1.00)
+
+There are a few ways to say &quot;Good morning&quot; in French, depending on the context:
+
+*   **Bonjour:** This is the most common and versatile way to say &quot;Good morning&quot; or &quot;Hello&quot; in French. You can use it in most situations.
+
+Therefore, the best translation is:
+
+**Bonjour**
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+There are a few ways to say "Good morning" in French, depending on the context:
+
+*   **Bonjour:** This is the most common and versatile way to say "Good morning" or "Hello" in French. You can use it in most situations.
+
+Therefore, the best translation is:
+
+**Bonjour**
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and appropriate translation of &quot;Good morning&quot; to French is:
+
+**Bonjour**
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+The most common and appropriate translation of "Good morning" to French is:
+
+**Bonjour**
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Bonjour
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Bonjour
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Thank you">Thank you</td>
+          
+          <td data-content="Spanish">Spanish</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and versatile translation of &quot;Thank you&quot; in Spanish is:
+
+*   **Gracias**
+
+You can also say:
+
+*   **Muchas gracias** (Thank you very much)
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+The most common and versatile translation of "Thank you" in Spanish is:
+
+*   **Gracias**
+
+You can also say:
+
+*   **Muchas gracias** (Thank you very much)
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and versatile translation of &quot;Thank you&quot; to Spanish is:
+
+*   **Gracias**
+
+Here are some other options, depending on the context:
+
+*   **Muchas gracias:** Thank you very much.
+*   **Mil gracias:** A thousand thanks.
+*   **Se lo agradezco:** I appreciate it (formal).
+*   **Te lo agradezco:** I appreciate it (informal).
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+The most common and versatile translation of "Thank you" to Spanish is:
+
+*   **Gracias**
+
+Here are some other options, depending on the context:
+
+*   **Muchas gracias:** Thank you very much.
+*   **Mil gracias:** A thousand thanks.
+*   **Se lo agradezco:** I appreciate it (formal).
+*   **Te lo agradezco:** I appreciate it (informal).
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common translation of &quot;Thank you&quot; in Spanish is:
+
+**Gracias**
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+The most common translation of "Thank you" in Spanish is:
+
+**Gracias**
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common translation is:
+
+**Gracias**
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+The most common translation is:
+
+**Gracias**
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="How are you?">How are you?</td>
+          
+          <td data-content="German">German</td>
+          
+          <td data-content="[PASS] (1.00)
+
+There are a few ways to translate &quot;How are you?&quot; into German, depending on the level of formality:
+
+*   **Formal:** Wie geht es Ihnen? (This is used when speaking to someone you don&#39;t know well, someone older than you, or someone in a position of authority.)
+
+*   **Informal:** Wie geht es dir? (This is used when speaking to friends, family, or people you know well.)
+
+*   **Very informal/colloquial:** Wie geht&#39;s? (This is a shortened version of &quot;Wie geht es dir?&quot; and is very casual.)
+
+So, the best translation depends on the context. If you&#39;re unsure, it&#39;s always safer to use the formal &quot;Wie geht es Ihnen?&quot;.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+There are a few ways to translate "How are you?" into German, depending on the level of formality:
+
+*   **Formal:** Wie geht es Ihnen? (This is used when speaking to someone you don't know well, someone older than you, or someone in a position of authority.)
+
+*   **Informal:** Wie geht es dir? (This is used when speaking to friends, family, or people you know well.)
+
+*   **Very informal/colloquial:** Wie geht's? (This is a shortened version of "Wie geht es dir?" and is very casual.)
+
+So, the best translation depends on the context. If you're unsure, it's always safer to use the formal "Wie geht es Ihnen?".
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common translation of &quot;How are you?&quot; in German is:
+
+**Wie geht es Ihnen?** (formal, used with people you don&#39;t know well or people in positions of authority)
+
+There are also other options, depending on the context:
+
+*   **Wie geht es dir?** (informal, used with friends and family)
+*   **Wie geht&#39;s?** (very informal, shortened version of &quot;Wie geht es dir?&quot;)
+*   **Alles gut?** (informal, literally &quot;Everything good?&quot;, similar to &quot;You alright?&quot;)
+*   **Was ist los?** (literally &quot;What&#39;s going on?&quot;, more like &quot;What&#39;s up?&quot;)
+
+So, the best option depends on who you are talking to.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+The most common translation of "How are you?" in German is:
+
+**Wie geht es Ihnen?** (formal, used with people you don't know well or people in positions of authority)
+
+There are also other options, depending on the context:
+
+*   **Wie geht es dir?** (informal, used with friends and family)
+*   **Wie geht's?** (very informal, shortened version of "Wie geht es dir?")
+*   **Alles gut?** (informal, literally "Everything good?", similar to "You alright?")
+*   **Was ist los?** (literally "What's going on?", more like "What's up?")
+
+So, the best option depends on who you are talking to.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common translation of &quot;How are you?&quot; in German is:
+
+**Wie geht es dir?** (informal, to someone you know well)
+
+or
+
+**Wie geht es Ihnen?** (formal, to someone you don&#39;t know well or someone older/in a position of authority)
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+The most common translation of "How are you?" in German is:
+
+**Wie geht es dir?** (informal, to someone you know well)
+
+or
+
+**Wie geht es Ihnen?** (formal, to someone you don't know well or someone older/in a position of authority)
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common translation of &quot;How are you?&quot; in German depends on the context and level of formality:
+
+* **Formal:**  `Wie geht es Ihnen?` (pronounced vee gayt es EE-nen) -  This is used when addressing someone older, someone in a position of authority, or someone you don&#39;t know well.
+
+* **Informal:** `Wie geht es dir?` (pronounced vee gayt es deer) - This is used when addressing friends, family, or people you know well.
+
+* **Very informal:** `Was geht?` (pronounced vas gayt) - This is a very casual and shortened version, similar to &quot;What&#39;s up?&quot; in English.  It&#39;s appropriate only among close friends.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+The most common translation of "How are you?" in German depends on the context and level of formality:
+
+* **Formal:**  `Wie geht es Ihnen?` (pronounced vee gayt es EE-nen) -  This is used when addressing someone older, someone in a position of authority, or someone you don't know well.
+
+* **Informal:** `Wie geht es dir?` (pronounced vee gayt es deer) - This is used when addressing friends, family, or people you know well.
+
+* **Very informal:** `Was geht?` (pronounced vas gayt) - This is a very casual and shortened version, similar to "What's up?" in English.  It's appropriate only among close friends.
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>
