@@ -1,0 +1,49 @@
+description: Testing Q&A with dynamic test casess
+
+prompts:
+  # - |-
+  #   Question: {{question}}
+
+  #   Please provide the answer.
+
+  # - |-
+  #   Input: {{input}}
+
+  #   Please provide the answer.
+
+  # - |-
+  #   Input: {{input}}
+  #   Context: {{context}}
+
+
+  #   Please provide the answer.
+
+
+  # - "Introduce about {{topic}}"
+
+  # - plus {{x}} + {{y}}
+
+  - file://prompt/prompt.json
+
+providers:
+  - openai:gpt-4o             
+  - openai:gpt-3.5-turbo 
+
+tests:
+  # - file://test/test_cases.csv
+  # - file://test/metadata.csv
+  # - file://test/generate_tests.py:create_tests
+  # - file://test/tests.json
+  # - file://test/tests.jsonl
+
+  - vars:
+      image: file://test/dog.jpg
+      question: 'What objects are in this image?'
+    assert:
+      - type: contains
+        value: 'dog'
+
+options:
+  trim: true
+  output: first
+

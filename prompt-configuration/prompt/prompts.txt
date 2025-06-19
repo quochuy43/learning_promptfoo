@@ -1,0 +1,5 @@
+Translate to French: {{text}}
+---
+Translate to Spanish: {{text}}
+---
+Translate to German: {{text}}

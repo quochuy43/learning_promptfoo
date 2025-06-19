@@ -18,8 +18,8 @@ prompts:
 
   # - 'Summarize the following text in {{topic_length}} words: {{processed_content}}'
 
-  - file://prompt1.txt
-  - file://prompt2.txt
+  - file://prompts/prompt1.txt
+  - file://prompts/prompt2.txt
 
 providers:
   # - google:gemini-2.0-flash-exp

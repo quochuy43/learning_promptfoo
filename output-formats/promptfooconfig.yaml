@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: Comparing gemini-1.5-flash and gemini-2.0-flash performance on riddles
+
+prompts:
+  - 'Solve this riddle: {{riddle}}'
+
+providers:
+  - google:gemini-1.5-flash
+  - google:gemini-2.0-flash
+
+tests:
+  - vars:
+      riddle: 'The more of this there is, the less you see. What is it?'
+    assert:
+      - type: contains
+        value: darkness
+  - vars:
+      riddle: '2+3*5'
+    assert:
+      - type: contains
+        value: "17"

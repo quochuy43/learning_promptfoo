@@ -1,0 +1,45 @@
+description: Testing dynamic prompts with Python logic
+
+prompts:
+  # - file://prompt/prompts.txt
+  # - file://prompt/conversation.json
+  # - file://prompt/generate_prompt.py:create_prompt
+
+  - |-
+    Question: {{question}}
+
+    Let's think step by step:
+    1. First, identify what we know
+    2. Then, determine what we need to find
+    3. Finally, solve the problem
+
+    Answer:
+
+providers:
+  - google:gemini-1.5-flash
+  - google:gemini-2.0-flash
+
+tests:
+  # - vars:
+      # text: Xin chào, tôi là Huy
+      # language: Python
+
+  # - vars:
+  #     topic: "machine learning"
+  #     technical_audience: true
+  #   assert:
+  #     - type: contains
+  #       value: "technical analysis"
+
+  # - vars:
+  #     topic: "deep learning"
+  #     technical_audience: true
+  #   assert:
+  #     - type: contains
+  #       value: "technical analysis"
+
+  - vars:
+      question: "What is 2 + 3?"
+    assert:
+      - type: contains
+        value: "5"

@@ -1,0 +1,41 @@
+riddle,[google:gemini-1.5-flash] Solve this riddle: {{riddle}},[google:gemini-2.0-flash] Solve this riddle: {{riddle}}
+"The more of this there is, the less you see. What is it?","[FAIL] (0.00)
+
+Expected output to contain ""darkness""
+---
+Darkness
+
+
+Fail Reason: Expected output to contain ""darkness""","[PASS] (1.00)
+
+The answer is **darkness**.
+
+
+Pass Reason: All assertions passed"
+2+3*5,"[PASS] (1.00)
+
+Following the order of operations (PEMDAS/BODMAS), multiplication comes before addition:
+
+3 * 5 = 15
+
+Then, 2 + 15 = 17
+
+The answer is $\boxed{17}$
+
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+  The answer depends on whether you're following the order of operations (PEMDAS/BODMAS):
+
+*   **If you follow the order of operations (Multiplication before Addition):**
+*   3 * 5 = 15
+*   2 + 15 = 17
+
+*   **If you solve from left to right (without order of operations):**
+*   2 + 3 = 5
+*   5 * 5 = 25
+
+**Therefore, the answer is 17, following the order of operations.**
+
+
+  Pass Reason: All assertions passed"

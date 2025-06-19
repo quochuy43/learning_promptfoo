@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Comparing gemini-1.5-flash and gemini-2.0-flash performance on riddles</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>riddle</th>
+        
+        <th>[google:gemini-1.5-flash] Solve this riddle: {{riddle}}</th>
+        
+        <th>[google:gemini-2.0-flash] Solve this riddle: {{riddle}}</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="The more of this there is, the less you see. What is it?">The more of this there is, the less you see. What is it?</td>
+          
+          <td data-content="[FAIL] (0.00)
+
+Expected output to contain &quot;darkness&quot;
+---
+Darkness
+
+
+Fail Reason: Expected output to contain &quot;darkness&quot;">[FAIL] (0.00)
+
+Expected output to contain "darkness"
+---
+Darkness
+
+
+Fail Reason: Expected output to contain "darkness"</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The answer is **darkness**.
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+The answer is **darkness**.
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="2+3*5">2+3*5</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Following the order of operations (PEMDAS/BODMAS), multiplication comes before addition:
+
+3 * 5 = 15
+
+Then, 2 + 15 = 17
+
+The answer is $&#92;boxed{17}$
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Following the order of operations (PEMDAS/BODMAS), multiplication comes before addition:
+
+3 * 5 = 15
+
+Then, 2 + 15 = 17
+
+The answer is $\boxed{17}$
+
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+  The answer depends on whether you&#39;re following the order of operations (PEMDAS/BODMAS):
+
+*   **If you follow the order of operations (Multiplication before Addition):**
+*   3 * 5 = 15
+*   2 + 15 = 17
+
+*   **If you solve from left to right (without order of operations):**
+*   2 + 3 = 5
+*   5 * 5 = 25
+
+**Therefore, the answer is 17, following the order of operations.**
+
+
+  Pass Reason: All assertions passed">[PASS] (1.00)
+
+  The answer depends on whether you're following the order of operations (PEMDAS/BODMAS):
+
+*   **If you follow the order of operations (Multiplication before Addition):**
+*   3 * 5 = 15
+*   2 + 15 = 17
+
+*   **If you solve from left to right (without order of operations):**
+*   2 + 3 = 5
+*   5 * 5 = 25
+
+**Therefore, the answer is 17, following the order of operations.**
+
+
+  Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

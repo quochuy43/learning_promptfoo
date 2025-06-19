@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Testing dynamic prompts with Python logic</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>question</th>
+        
+        <th>[google:gemini-1.5-flash] Question: {{question}}
+
+Let's think step by step:
+1. First, identify what we know
+2. Then, determine what we need to find
+3. Finally, solve the problem
+
+Answer:</th>
+        
+        <th>[google:gemini-2.0-flash] Question: {{question}}
+
+Let's think step by step:
+1. First, identify what we know
+2. Then, determine what we need to find
+3. Finally, solve the problem
+
+Answer:</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="What is 2 + 3?">What is 2 + 3?</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Answer:
+
+1. **What we know:** We know the two numbers we need to add: 2 and 3.
+
+2. **What we need to find:** We need to find the sum of 2 and 3.
+
+3. **Solve the problem:** 2 + 3 = 5
+
+Therefore, the answer is $&#92;boxed{5}$
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Answer:
+
+1. **What we know:** We know the two numbers we need to add: 2 and 3.
+
+2. **What we need to find:** We need to find the sum of 2 and 3.
+
+3. **Solve the problem:** 2 + 3 = 5
+
+Therefore, the answer is $\boxed{5}$
+
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+1. We know we have the numbers 2 and 3.
+2. We need to find the sum of 2 and 3.
+3. 2 + 3 = 5
+
+Answer: 5
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+1. We know we have the numbers 2 and 3.
+2. We need to find the sum of 2 and 3.
+3. 2 + 3 = 5
+
+Answer: 5
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

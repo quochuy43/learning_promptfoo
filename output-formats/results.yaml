@@ -1,0 +1,461 @@
+evalId: eval-SkY-2025-06-19T04:18:25
+results:
+  version: 3
+  timestamp: '2025-06-19T04:18:25.983Z'
+  prompts:
+    - raw: 'Solve this riddle: {{riddle}}'
+      label: 'Solve this riddle: {{riddle}}'
+      id: cd59d97e5a3914afcea76dcc2fdd43bbbb60e8374fcca26d8f76ee3e4e21c73a
+      provider: google:gemini-1.5-flash
+      metrics:
+        score: 1
+        testPassCount: 1
+        testFailCount: 1
+        testErrorCount: 0
+        assertPassCount: 1
+        assertFailCount: 1
+        totalLatencyMs: 71
+        tokenUsage:
+          total: 82
+          prompt: 0
+          completion: 0
+          cached: 82
+          numRequests: 2
+          completionDetails:
+            reasoning: 0
+            acceptedPrediction: 0
+            rejectedPrediction: 0
+          assertions:
+            total: 0
+            prompt: 0
+            completion: 0
+            cached: 0
+        namedScores: {}
+        namedScoresCount: {}
+        cost: 0
+    - raw: 'Solve this riddle: {{riddle}}'
+      label: 'Solve this riddle: {{riddle}}'
+      id: cd59d97e5a3914afcea76dcc2fdd43bbbb60e8374fcca26d8f76ee3e4e21c73a
+      provider: google:gemini-2.0-flash
+      metrics:
+        score: 2
+        testPassCount: 2
+        testFailCount: 0
+        testErrorCount: 0
+        assertPassCount: 2
+        assertFailCount: 0
+        totalLatencyMs: 69
+        tokenUsage:
+          total: 158
+          prompt: 0
+          completion: 0
+          cached: 158
+          numRequests: 2
+          completionDetails:
+            reasoning: 0
+            acceptedPrediction: 0
+            rejectedPrediction: 0
+          assertions:
+            total: 0
+            prompt: 0
+            completion: 0
+            cached: 0
+        namedScores: {}
+        namedScoresCount: {}
+        cost: 0
+  results:
+    - cost: 0
+      error: Expected output to contain "darkness"
+      gradingResult:
+        pass: false
+        score: 0
+        reason: Expected output to contain "darkness"
+        namedScores: {}
+        tokensUsed:
+          total: 0
+          prompt: 0
+          completion: 0
+          cached: 0
+        componentResults:
+          - pass: false
+            score: 0
+            reason: Expected output to contain "darkness"
+            assertion:
+              type: contains
+              value: darkness
+        assertion: null
+      id: 65bca5ed-c47b-47a4-843d-f305301886fb
+      latencyMs: 15
+      namedScores: {}
+      prompt:
+        raw: >-
+          Solve this riddle: The more of this there is, the less you see. What
+          is it?
+        label: 'Solve this riddle: {{riddle}}'
+      promptId: cd59d97e5a3914afcea76dcc2fdd43bbbb60e8374fcca26d8f76ee3e4e21c73a
+      promptIdx: 0
+      provider:
+        id: google:gemini-1.5-flash
+        label: ''
+      response:
+        output: |
+          Darkness
+        tokenUsage:
+          cached: 22
+          total: 22
+          numRequests: 0
+        raw:
+          candidates:
+            - content:
+                parts:
+                  - text: |
+                      Darkness
+                role: model
+              finishReason: STOP
+              avgLogprobs: -0.003568482119590044
+          usageMetadata:
+            promptTokenCount: 20
+            candidatesTokenCount: 2
+            totalTokenCount: 22
+            promptTokensDetails:
+              - modality: TEXT
+                tokenCount: 20
+            candidatesTokensDetails:
+              - modality: TEXT
+                tokenCount: 2
+          modelVersion: gemini-1.5-flash
+          responseId: SmxTaLa8HqiUsbQPmK3KkQI
+        cached: true
+        metadata: {}
+      score: 0
+      success: false
+      testCase:
+        vars: &ref_0
+          riddle: The more of this there is, the less you see. What is it?
+        assert:
+          - type: contains
+            value: darkness
+        options: {}
+        metadata: {}
+      testIdx: 0
+      vars: *ref_0
+      metadata:
+        _promptfooFileMetadata: {}
+      failureReason: 1
+    - cost: 0
+      gradingResult:
+        pass: true
+        score: 1
+        reason: All assertions passed
+        namedScores: {}
+        tokensUsed:
+          total: 0
+          prompt: 0
+          completion: 0
+          cached: 0
+        componentResults:
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion:
+              type: contains
+              value: '17'
+        assertion: null
+      id: 4a36577d-9bb5-468c-b136-9f739ed39946
+      latencyMs: 25
+      namedScores: {}
+      prompt:
+        raw: 'Solve this riddle: 2+3*5'
+        label: 'Solve this riddle: {{riddle}}'
+      promptId: cd59d97e5a3914afcea76dcc2fdd43bbbb60e8374fcca26d8f76ee3e4e21c73a
+      promptIdx: 1
+      provider:
+        id: google:gemini-2.0-flash
+        label: ''
+      response:
+        output: >
+          The answer depends on whether you're following the order of operations
+          (PEMDAS/BODMAS):
+
+
+          *   **If you follow the order of operations (Multiplication before
+          Addition):**
+              *   3 * 5 = 15
+              *   2 + 15 = 17
+
+          *   **If you solve from left to right (without order of operations):**
+              *   2 + 3 = 5
+              *   5 * 5 = 25
+
+          **Therefore, the answer is 17, following the order of operations.**
+        tokenUsage:
+          cached: 131
+          total: 131
+          numRequests: 0
+        raw:
+          candidates:
+            - content:
+                parts:
+                  - text: >
+                      The answer depends on whether you're following the order
+                      of operations (PEMDAS/BODMAS):
+
+
+                      *   **If you follow the order of operations
+                      (Multiplication before Addition):**
+                          *   3 * 5 = 15
+                          *   2 + 15 = 17
+
+                      *   **If you solve from left to right (without order of
+                      operations):**
+                          *   2 + 3 = 5
+                          *   5 * 5 = 25
+
+                      **Therefore, the answer is 17, following the order of
+                      operations.**
+                role: model
+              finishReason: STOP
+              avgLogprobs: -0.23432506214488635
+          usageMetadata:
+            promptTokenCount: 10
+            candidatesTokenCount: 121
+            totalTokenCount: 131
+            promptTokensDetails:
+              - modality: TEXT
+                tokenCount: 10
+            candidatesTokensDetails:
+              - modality: TEXT
+                tokenCount: 121
+          modelVersion: gemini-2.0-flash
+          responseId: dY5TaKnWHf6ShMIPm7P8iAY
+        cached: true
+        metadata: {}
+      score: 1
+      success: true
+      testCase:
+        vars: &ref_1
+          riddle: 2+3*5
+        assert:
+          - type: contains
+            value: '17'
+        options: {}
+        metadata: {}
+      testIdx: 1
+      vars: *ref_1
+      metadata:
+        _promptfooFileMetadata: {}
+      failureReason: 0
+    - cost: 0
+      gradingResult:
+        pass: true
+        score: 1
+        reason: All assertions passed
+        namedScores: {}
+        tokensUsed:
+          total: 0
+          prompt: 0
+          completion: 0
+          cached: 0
+        componentResults:
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion:
+              type: contains
+              value: darkness
+        assertion: null
+      id: 65864193-ff08-4679-b5e5-db9ffda88311
+      latencyMs: 44
+      namedScores: {}
+      prompt:
+        raw: >-
+          Solve this riddle: The more of this there is, the less you see. What
+          is it?
+        label: 'Solve this riddle: {{riddle}}'
+      promptId: cd59d97e5a3914afcea76dcc2fdd43bbbb60e8374fcca26d8f76ee3e4e21c73a
+      promptIdx: 1
+      provider:
+        id: google:gemini-2.0-flash
+        label: ''
+      response:
+        output: |
+          The answer is **darkness**.
+        tokenUsage:
+          cached: 27
+          total: 27
+          numRequests: 0
+        raw:
+          candidates:
+            - content:
+                parts:
+                  - text: |
+                      The answer is **darkness**.
+                role: model
+              finishReason: STOP
+              avgLogprobs: -0.12267430339540754
+          usageMetadata:
+            promptTokenCount: 20
+            candidatesTokenCount: 7
+            totalTokenCount: 27
+            promptTokensDetails:
+              - modality: TEXT
+                tokenCount: 20
+            candidatesTokensDetails:
+              - modality: TEXT
+                tokenCount: 7
+          modelVersion: gemini-2.0-flash
+          responseId: SmxTaOKlIcKw2cAPzu2VqAY
+        cached: true
+        metadata: {}
+      score: 1
+      success: true
+      testCase:
+        vars: &ref_2
+          riddle: The more of this there is, the less you see. What is it?
+        assert:
+          - type: contains
+            value: darkness
+        options: {}
+        metadata: {}
+      testIdx: 0
+      vars: *ref_2
+      metadata:
+        _promptfooFileMetadata: {}
+      failureReason: 0
+    - cost: 0
+      gradingResult:
+        pass: true
+        score: 1
+        reason: All assertions passed
+        namedScores: {}
+        tokensUsed:
+          total: 0
+          prompt: 0
+          completion: 0
+          cached: 0
+        componentResults:
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion:
+              type: contains
+              value: '17'
+        assertion: null
+      id: e48c3608-132f-4dff-b32f-c6677857772f
+      latencyMs: 56
+      namedScores: {}
+      prompt:
+        raw: 'Solve this riddle: 2+3*5'
+        label: 'Solve this riddle: {{riddle}}'
+      promptId: cd59d97e5a3914afcea76dcc2fdd43bbbb60e8374fcca26d8f76ee3e4e21c73a
+      promptIdx: 0
+      provider:
+        id: google:gemini-1.5-flash
+        label: ''
+      response:
+        output: >
+          Following the order of operations (PEMDAS/BODMAS), multiplication
+          comes before addition:
+
+
+          3 * 5 = 15
+
+
+          Then, 2 + 15 = 17
+
+
+          The answer is $\boxed{17}$
+        tokenUsage:
+          cached: 60
+          total: 60
+          numRequests: 0
+        raw:
+          candidates:
+            - content:
+                parts:
+                  - text: >
+                      Following the order of operations (PEMDAS/BODMAS),
+                      multiplication comes before addition:
+
+
+                      3 * 5 = 15
+
+
+                      Then, 2 + 15 = 17
+
+
+                      The answer is $\boxed{17}$
+                role: model
+              finishReason: STOP
+              avgLogprobs: -0.046777019500732424
+          usageMetadata:
+            promptTokenCount: 10
+            candidatesTokenCount: 50
+            totalTokenCount: 60
+            promptTokensDetails:
+              - modality: TEXT
+                tokenCount: 10
+            candidatesTokensDetails:
+              - modality: TEXT
+                tokenCount: 50
+          modelVersion: gemini-1.5-flash
+          responseId: dY5TaIrVHeiChMIP-ufFUQ
+        cached: true
+        metadata: {}
+      score: 1
+      success: true
+      testCase:
+        vars: &ref_3
+          riddle: 2+3*5
+        assert:
+          - type: contains
+            value: '17'
+        options: {}
+        metadata: {}
+      testIdx: 1
+      vars: *ref_3
+      metadata:
+        _promptfooFileMetadata: {}
+      failureReason: 0
+  stats:
+    successes: 3
+    failures: 1
+    errors: 0
+    tokenUsage:
+      cached: 240
+      completion: 0
+      prompt: 0
+      total: 240
+      numRequests: 4
+      completionDetails:
+        reasoning: 0
+        acceptedPrediction: 0
+        rejectedPrediction: 0
+      assertions:
+        total: 0
+        prompt: 0
+        completion: 0
+        cached: 0
+config:
+  description: Comparing gemini-1.5-flash and gemini-2.0-flash performance on riddles
+  prompts:
+    - 'Solve this riddle: {{riddle}}'
+  providers:
+    - google:gemini-1.5-flash
+    - google:gemini-2.0-flash
+  tests:
+    - vars:
+        riddle: The more of this there is, the less you see. What is it?
+      assert:
+        - type: contains
+          value: darkness
+    - vars:
+        riddle: 2+3*5
+      assert:
+        - type: contains
+          value: '17'
+  sharing: true
+  outputPath:
+    - results.yaml
+  extensions: []
+shareableUrl: null
