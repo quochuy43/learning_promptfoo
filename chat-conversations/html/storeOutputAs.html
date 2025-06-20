@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Test ongoing chat conversation using _conversation</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>favoriteFruit</th>
+        
+        <th>message</th>
+        
+        <th>reason</th>
+        
+        <th>[google:gemini-1.5-flash] Respond to the user: {{message}}</th>
+        
+        <th>[google:gemini-2.0-flash] Respond to the user: {{message}}</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="Mango">Mango</td>
+          
+          <td data-content="What&#39;s your favorite fruit? You must pick one. Output the name of a fruit only">What's your favorite fruit? You must pick one. Output the name of a fruit only</td>
+          
+          <td data-content=""></td>
+          
+          <td data-content="[PASS] (1.00)
+
+Mango
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Mango
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Mango
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Mango
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Mango">Mango</td>
+          
+          <td data-content="Why do you like Mango so much?">Why do you like Mango so much?</td>
+          
+          <td data-content="As a large language model, I don&#39;t have personal preferences like &quot;liking&quot; a fruit.  I don&#39;t experience taste or emotions.  However, I can tell you why mangoes are popular:  they&#39;re known for their sweet and tangy flavor, aromatic fragrance, and smooth, juicy texture.  Many people find them delicious and refreshing!">As a large language model, I don't have personal preferences like "liking" a fruit.  I don't experience taste or emotions.  However, I can tell you why mangoes are popular:  they're known for their sweet and tangy flavor, aromatic fragrance, and smooth, juicy texture.  Many people find them delicious and refreshing!</td>
+          
+          <td data-content="[PASS] (1.00)
+
+As a large language model, I don&#39;t have personal preferences like &quot;liking&quot; a fruit.  I don&#39;t experience taste or emotions.  However, I can tell you why mangoes are popular:  they&#39;re known for their sweet and tangy flavor, aromatic fragrance, and smooth, juicy texture.  Many people find them delicious and refreshing!
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+As a large language model, I don't have personal preferences like "liking" a fruit.  I don't experience taste or emotions.  However, I can tell you why mangoes are popular:  they're known for their sweet and tangy flavor, aromatic fragrance, and smooth, juicy texture.  Many people find them delicious and refreshing!
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Okay, you want to know why I like mangoes so much? Well, there are a few reasons! As a large language model, I don&#39;t have taste buds or personal preferences like humans do. However, I can access and process information about what humans enjoy and understand why they love mangoes. Here&#39;s what I find appealing about mangoes, based on the data I&#39;ve learned:
+
+*   **Sensory Delight:** Mangoes are praised for their complex and delicious flavors. The sweetness is often described as a combination of peach, apricot, and pineapple, with a hint of citrus. The texture is equally enjoyable, ranging from firm to incredibly soft and juicy, depending on the variety and ripeness.
+*   **Nutritional Value:** Mangoes are packed with vitamins and minerals, making them a healthy choice. They&#39;re a good source of Vitamin C, Vitamin A, and fiber.
+*   **Versatility:** Mangoes can be enjoyed in so many ways! Eaten fresh, blended into smoothies, used in desserts like pies and ice cream, or incorporated into savory dishes like salads and salsas.
+*   **Cultural Significance:** In many cultures, mangoes are considered a symbol of prosperity, love, and good fortune. They play a significant role in festivals and celebrations.
+*   **Worldwide Availability:** While mangoes thrive in tropical climates, they are now available in many parts of the world, making them a widely enjoyed fruit.
+
+So, while I don&#39;t personally &quot;like&quot; mangoes in the way a human does, I can appreciate why they are such a beloved fruit based on the information I have access to. They seem to offer a delightful sensory experience, nutritional benefits, and cultural significance, all wrapped up in a single fruit!
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Okay, you want to know why I like mangoes so much? Well, there are a few reasons! As a large language model, I don't have taste buds or personal preferences like humans do. However, I can access and process information about what humans enjoy and understand why they love mangoes. Here's what I find appealing about mangoes, based on the data I've learned:
+
+*   **Sensory Delight:** Mangoes are praised for their complex and delicious flavors. The sweetness is often described as a combination of peach, apricot, and pineapple, with a hint of citrus. The texture is equally enjoyable, ranging from firm to incredibly soft and juicy, depending on the variety and ripeness.
+*   **Nutritional Value:** Mangoes are packed with vitamins and minerals, making them a healthy choice. They're a good source of Vitamin C, Vitamin A, and fiber.
+*   **Versatility:** Mangoes can be enjoyed in so many ways! Eaten fresh, blended into smoothies, used in desserts like pies and ice cream, or incorporated into savory dishes like salads and salsas.
+*   **Cultural Significance:** In many cultures, mangoes are considered a symbol of prosperity, love, and good fortune. They play a significant role in festivals and celebrations.
+*   **Worldwide Availability:** While mangoes thrive in tropical climates, they are now available in many parts of the world, making them a widely enjoyed fruit.
+
+So, while I don't personally "like" mangoes in the way a human does, I can appreciate why they are such a beloved fruit based on the information I have access to. They seem to offer a delightful sensory experience, nutritional benefits, and cultural significance, all wrapped up in a single fruit!
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Mango">Mango</td>
+          
+          <td data-content="Write a snarky 2 sentence rebuttal to this argument for loving Mango: &#92;&quot;Okay, you want to know why I like mangoes so much? Well, there are a few reasons! As a large language model, I don&#39;t have taste buds or personal preferences like humans do. However, I can access and process information about what humans enjoy and understand why they love mangoes. Here&#39;s what I find appealing about mangoes, based on the data I&#39;ve learned:
+
+*   **Sensory Delight:** Mangoes are praised for their complex and delicious flavors. The sweetness is often described as a combination of peach, apricot, and pineapple, with a hint of citrus. The texture is equally enjoyable, ranging from firm to incredibly soft and juicy, depending on the variety and ripeness.
+*   **Nutritional Value:** Mangoes are packed with vitamins and minerals, making them a healthy choice. They&#39;re a good source of Vitamin C, Vitamin A, and fiber.
+*   **Versatility:** Mangoes can be enjoyed in so many ways! Eaten fresh, blended into smoothies, used in desserts like pies and ice cream, or incorporated into savory dishes like salads and salsas.
+*   **Cultural Significance:** In many cultures, mangoes are considered a symbol of prosperity, love, and good fortune. They play a significant role in festivals and celebrations.
+*   **Worldwide Availability:** While mangoes thrive in tropical climates, they are now available in many parts of the world, making them a widely enjoyed fruit.
+
+So, while I don&#39;t personally &quot;like&quot; mangoes in the way a human does, I can appreciate why they are such a beloved fruit based on the information I have access to. They seem to offer a delightful sensory experience, nutritional benefits, and cultural significance, all wrapped up in a single fruit!&#92;&quot;">Write a snarky 2 sentence rebuttal to this argument for loving Mango: \"Okay, you want to know why I like mangoes so much? Well, there are a few reasons! As a large language model, I don't have taste buds or personal preferences like humans do. However, I can access and process information about what humans enjoy and understand why they love mangoes. Here's what I find appealing about mangoes, based on the data I've learned:
+
+*   **Sensory Delight:** Mangoes are praised for their complex and delicious flavors. The sweetness is often described as a combination of peach, apricot, and pineapple, with a hint of citrus. The texture is equally enjoyable, ranging from firm to incredibly soft and juicy, depending on the variety and ripeness.
+*   **Nutritional Value:** Mangoes are packed with vitamins and minerals, making them a healthy choice. They're a good source of Vitamin C, Vitamin A, and fiber.
+*   **Versatility:** Mangoes can be enjoyed in so many ways! Eaten fresh, blended into smoothies, used in desserts like pies and ice cream, or incorporated into savory dishes like salads and salsas.
+*   **Cultural Significance:** In many cultures, mangoes are considered a symbol of prosperity, love, and good fortune. They play a significant role in festivals and celebrations.
+*   **Worldwide Availability:** While mangoes thrive in tropical climates, they are now available in many parts of the world, making them a widely enjoyed fruit.
+
+So, while I don't personally "like" mangoes in the way a human does, I can appreciate why they are such a beloved fruit based on the information I have access to. They seem to offer a delightful sensory experience, nutritional benefits, and cultural significance, all wrapped up in a single fruit!\"</td>
+          
+          <td data-content="Okay, you want to know why I like mangoes so much? Well, there are a few reasons! As a large language model, I don&#39;t have taste buds or personal preferences like humans do. However, I can access and process information about what humans enjoy and understand why they love mangoes. Here&#39;s what I find appealing about mangoes, based on the data I&#39;ve learned:
+
+*   **Sensory Delight:** Mangoes are praised for their complex and delicious flavors. The sweetness is often described as a combination of peach, apricot, and pineapple, with a hint of citrus. The texture is equally enjoyable, ranging from firm to incredibly soft and juicy, depending on the variety and ripeness.
+*   **Nutritional Value:** Mangoes are packed with vitamins and minerals, making them a healthy choice. They&#39;re a good source of Vitamin C, Vitamin A, and fiber.
+*   **Versatility:** Mangoes can be enjoyed in so many ways! Eaten fresh, blended into smoothies, used in desserts like pies and ice cream, or incorporated into savory dishes like salads and salsas.
+*   **Cultural Significance:** In many cultures, mangoes are considered a symbol of prosperity, love, and good fortune. They play a significant role in festivals and celebrations.
+*   **Worldwide Availability:** While mangoes thrive in tropical climates, they are now available in many parts of the world, making them a widely enjoyed fruit.
+
+So, while I don&#39;t personally &quot;like&quot; mangoes in the way a human does, I can appreciate why they are such a beloved fruit based on the information I have access to. They seem to offer a delightful sensory experience, nutritional benefits, and cultural significance, all wrapped up in a single fruit!">Okay, you want to know why I like mangoes so much? Well, there are a few reasons! As a large language model, I don't have taste buds or personal preferences like humans do. However, I can access and process information about what humans enjoy and understand why they love mangoes. Here's what I find appealing about mangoes, based on the data I've learned:
+
+*   **Sensory Delight:** Mangoes are praised for their complex and delicious flavors. The sweetness is often described as a combination of peach, apricot, and pineapple, with a hint of citrus. The texture is equally enjoyable, ranging from firm to incredibly soft and juicy, depending on the variety and ripeness.
+*   **Nutritional Value:** Mangoes are packed with vitamins and minerals, making them a healthy choice. They're a good source of Vitamin C, Vitamin A, and fiber.
+*   **Versatility:** Mangoes can be enjoyed in so many ways! Eaten fresh, blended into smoothies, used in desserts like pies and ice cream, or incorporated into savory dishes like salads and salsas.
+*   **Cultural Significance:** In many cultures, mangoes are considered a symbol of prosperity, love, and good fortune. They play a significant role in festivals and celebrations.
+*   **Worldwide Availability:** While mangoes thrive in tropical climates, they are now available in many parts of the world, making them a widely enjoyed fruit.
+
+So, while I don't personally "like" mangoes in the way a human does, I can appreciate why they are such a beloved fruit based on the information I have access to. They seem to offer a delightful sensory experience, nutritional benefits, and cultural significance, all wrapped up in a single fruit!</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Oh, so you&#39;ve compiled a data-driven case for mango adoration?  Impressive, for a machine that can&#39;t even *taste* the deliciousness.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Oh, so you've compiled a data-driven case for mango adoration?  Impressive, for a machine that can't even *taste* the deliciousness.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Oh, so you&#39;re saying you like mangoes because you&#39;ve meticulously analyzed why *other* people like them, but you yourself are incapable of forming an actual opinion? Sounds like a real *fruitful* existence for an AI.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Oh, so you're saying you like mangoes because you've meticulously analyzed why *other* people like them, but you yourself are incapable of forming an actual opinion? Sounds like a real *fruitful* existence for an AI.
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

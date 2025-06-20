@@ -1,0 +1,566 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>LVQH</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>expectedGoodMorning</th>
+        
+        <th>expectedHelloWorld</th>
+        
+        <th>expectedHowAreYou</th>
+        
+        <th>input</th>
+        
+        <th>language</th>
+        
+        <th>[google:gemini-2.0-flash] prompt.txt: You're a translator.  Translate this into {{language}}: {{input}}</th>
+        
+        <th>[google:gemini-2.0-flash] prompt.txt: Speak in {{language}}: {{input}}</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="Buenos días">Buenos días</td>
+          
+          <td data-content="Hola mundo">Hola mundo</td>
+          
+          <td data-content="¿Cómo estás?">¿Cómo estás?</td>
+          
+          <td data-content="Hello world">Hello world</td>
+          
+          <td data-content="Spanish">Spanish</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and direct translation of &quot;Hello world&quot; into Spanish is:
+
+**Hola mundo**
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+The most common and direct translation of "Hello world" into Spanish is:
+
+**Hola mundo**
+
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Hola mundo.
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Hola mundo.
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Buenos días">Buenos días</td>
+          
+          <td data-content="Hola mundo">Hola mundo</td>
+          
+          <td data-content="¿Cómo estás?">¿Cómo estás?</td>
+          
+          <td data-content="Good morning">Good morning</td>
+          
+          <td data-content="Spanish">Spanish</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and natural translation of &quot;Good morning&quot; into Spanish is:
+
+**Buenos días**
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+The most common and natural translation of "Good morning" into Spanish is:
+
+**Buenos días**
+
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Buenos días.
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Buenos días.
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Buenos días">Buenos días</td>
+          
+          <td data-content="Hola mundo">Hola mundo</td>
+          
+          <td data-content="¿Cómo estás?">¿Cómo estás?</td>
+          
+          <td data-content="How are you?">How are you?</td>
+          
+          <td data-content="Spanish">Spanish</td>
+          
+          <td data-content="[PASS] (1.00)
+
+There are a few ways to translate &quot;How are you?&quot; into Spanish, depending on the level of formality:
+
+*   **Formal:** ¿Cómo está? (This is used when addressing someone you don&#39;t know well, someone older than you, or someone in a position of authority.)
+
+*   **Informal:** ¿Cómo estás? (This is used with friends, family, or people you know well.)
+
+*   **More general (can be formal or informal depending on context):** ¿Qué tal? (This is a more casual way of asking &quot;How are you?&quot; and can be used in many situations.)
+
+*   **Very informal:** ¿Qué pasa? / ¿Qué onda? (These are very casual and slangy, often used with close friends. &quot;¿Qué onda?&quot; is more common in some Latin American countries.)
+
+So, the best translation depends on the context of the conversation and your relationship with the person you&#39;re talking to.
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+There are a few ways to translate "How are you?" into Spanish, depending on the level of formality:
+
+*   **Formal:** ¿Cómo está? (This is used when addressing someone you don't know well, someone older than you, or someone in a position of authority.)
+
+*   **Informal:** ¿Cómo estás? (This is used with friends, family, or people you know well.)
+
+*   **More general (can be formal or informal depending on context):** ¿Qué tal? (This is a more casual way of asking "How are you?" and can be used in many situations.)
+
+*   **Very informal:** ¿Qué pasa? / ¿Qué onda? (These are very casual and slangy, often used with close friends. "¿Qué onda?" is more common in some Latin American countries.)
+
+So, the best translation depends on the context of the conversation and your relationship with the person you're talking to.
+
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+There are several ways to say &quot;How are you?&quot; in Spanish, depending on the level of formality:
+
+*   **Formal:** ¿Cómo está? (Used when speaking to someone you don&#39;t know well, someone older than you, or someone in a position of authority)
+
+*   **Informal:** ¿Cómo estás? (Used when speaking to friends, family, or people you know well)
+
+*   **Very informal/Casual:** ¿Qué tal? / ¿Qué pasa? / ¿Qué onda? (More like &quot;What&#39;s up?&quot; or &quot;How&#39;s it going?&quot;)
+
+So, to answer your question most directly, here are the most common translations:
+
+*   **¿Cómo estás?** (Informal)
+*   **¿Cómo está?** (Formal)
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+There are several ways to say "How are you?" in Spanish, depending on the level of formality:
+
+*   **Formal:** ¿Cómo está? (Used when speaking to someone you don't know well, someone older than you, or someone in a position of authority)
+
+*   **Informal:** ¿Cómo estás? (Used when speaking to friends, family, or people you know well)
+
+*   **Very informal/Casual:** ¿Qué tal? / ¿Qué pasa? / ¿Qué onda? (More like "What's up?" or "How's it going?")
+
+So, to answer your question most directly, here are the most common translations:
+
+*   **¿Cómo estás?** (Informal)
+*   **¿Cómo está?** (Formal)
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Bonjour">Bonjour</td>
+          
+          <td data-content="Bonjour le monde">Bonjour le monde</td>
+          
+          <td data-content="Comment ça va?">Comment ça va?</td>
+          
+          <td data-content="Hello world">Hello world</td>
+          
+          <td data-content="French">French</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and direct translation of &quot;Hello world&quot; into French is:
+
+**Bonjour le monde**
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+The most common and direct translation of "Hello world" into French is:
+
+**Bonjour le monde**
+
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour le monde
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour le monde
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Bonjour">Bonjour</td>
+          
+          <td data-content="Bonjour le monde">Bonjour le monde</td>
+          
+          <td data-content="Comment ça va?">Comment ça va?</td>
+          
+          <td data-content="Good morning">Good morning</td>
+          
+          <td data-content="French">French</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and appropriate translation of &quot;Good morning&quot; into French is:
+
+**Bonjour**
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+The most common and appropriate translation of "Good morning" into French is:
+
+**Bonjour**
+
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Bonjour">Bonjour</td>
+          
+          <td data-content="Bonjour le monde">Bonjour le monde</td>
+          
+          <td data-content="Comment ça va?">Comment ça va?</td>
+          
+          <td data-content="How are you?">How are you?</td>
+          
+          <td data-content="French">French</td>
+          
+          <td data-content="[FAIL] (0.00)
+
+Expected output to contain &quot;Comment ça va?&quot;
+---
+There are several ways to say &quot;How are you?&quot; in French, depending on the level of formality:
+
+*   **Formal:** *Comment allez-vous ?* (This is the most polite and formal option, used with people you don&#39;t know well, people of authority, or in formal settings.)
+
+*   **Informal:** *Comment vas-tu ?* (This is used with friends, family, and people you know well.)
+
+*   **Very informal:** *Ça va ?* (This is a very casual option, similar to &quot;You alright?&quot; or &quot;What&#39;s up?&quot;)
+
+*   **Very informal (slightly more polite than &quot;Ça va ?&quot;):** *Ça va bien ?* (Similar meaning to &quot;Ça va ?&quot; but slightly more emphasis on if things are well)
+
+Therefore, the best translation depends on the context! If you need a general answer, **Comment allez-vous ?** is the safest bet.
+
+
+Fail Reason: Expected output to contain &quot;Comment ça va?&quot;">[FAIL] (0.00)
+
+Expected output to contain "Comment ça va?"
+---
+There are several ways to say "How are you?" in French, depending on the level of formality:
+
+*   **Formal:** *Comment allez-vous ?* (This is the most polite and formal option, used with people you don't know well, people of authority, or in formal settings.)
+
+*   **Informal:** *Comment vas-tu ?* (This is used with friends, family, and people you know well.)
+
+*   **Very informal:** *Ça va ?* (This is a very casual option, similar to "You alright?" or "What's up?")
+
+*   **Very informal (slightly more polite than "Ça va ?"):** *Ça va bien ?* (Similar meaning to "Ça va ?" but slightly more emphasis on if things are well)
+
+Therefore, the best translation depends on the context! If you need a general answer, **Comment allez-vous ?** is the safest bet.
+
+
+Fail Reason: Expected output to contain "Comment ça va?"</td>
+          
+          <td data-content="[FAIL] (0.00)
+
+  Expected output to contain &quot;Comment ça va?&quot;
+---
+There are several ways to say &quot;How are you?&quot; in French, depending on the level of formality:
+
+*   **Formal:**
+*   **Comment allez-vous ?** (Pronounced: Ko-mahn ta-lay voo?) - This is the most polite and formal way to ask.
+
+*   **Informal:**
+*   **Ça va ?** (Pronounced: Sa va?) - This is a very common and casual way to ask. It literally means &quot;It goes?&quot;.
+*   **Comment vas-tu ?** (Pronounced: Ko-mahn va too?) - This is a slightly more formal than &quot;Ça va ?&quot;, but still used with friends and family.
+
+*   **Very informal:**
+*   **Quoi de neuf ?** (Pronounced: Kwa duh nuhf?) - This means &quot;What&#39;s new?&quot;
+*   **Salut, ça va ?** (Pronounced: Sa-loo, sa va?) - Adding &quot;Salut&quot; (Hi) at the beginning of &quot;Ça va ?&quot; makes it even more casual.
+
+So, depending on whom you are addressing, choose one of the phrases above.
+
+
+
+  Fail Reason: Expected output to contain &quot;Comment ça va?&quot;">[FAIL] (0.00)
+
+  Expected output to contain "Comment ça va?"
+---
+There are several ways to say "How are you?" in French, depending on the level of formality:
+
+*   **Formal:**
+*   **Comment allez-vous ?** (Pronounced: Ko-mahn ta-lay voo?) - This is the most polite and formal way to ask.
+
+*   **Informal:**
+*   **Ça va ?** (Pronounced: Sa va?) - This is a very common and casual way to ask. It literally means "It goes?".
+*   **Comment vas-tu ?** (Pronounced: Ko-mahn va too?) - This is a slightly more formal than "Ça va ?", but still used with friends and family.
+
+*   **Very informal:**
+*   **Quoi de neuf ?** (Pronounced: Kwa duh nuhf?) - This means "What's new?"
+*   **Salut, ça va ?** (Pronounced: Sa-loo, sa va?) - Adding "Salut" (Hi) at the beginning of "Ça va ?" makes it even more casual.
+
+So, depending on whom you are addressing, choose one of the phrases above.
+
+
+
+  Fail Reason: Expected output to contain "Comment ça va?"</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Guten Morgen">Guten Morgen</td>
+          
+          <td data-content="Hallo Welt">Hallo Welt</td>
+          
+          <td data-content="Wie geht es dir?">Wie geht es dir?</td>
+          
+          <td data-content="Hello world">Hello world</td>
+          
+          <td data-content="German">German</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and direct translation of &quot;Hello world&quot; into German is:
+
+**Hallo Welt**
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+The most common and direct translation of "Hello world" into German is:
+
+**Hallo Welt**
+
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Hallo Welt!
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Hallo Welt!
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Guten Morgen">Guten Morgen</td>
+          
+          <td data-content="Hallo Welt">Hallo Welt</td>
+          
+          <td data-content="Wie geht es dir?">Wie geht es dir?</td>
+          
+          <td data-content="Good morning">Good morning</td>
+          
+          <td data-content="German">German</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common and natural translation of &quot;Good morning&quot; into German is:
+
+**Guten Morgen**
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+The most common and natural translation of "Good morning" into German is:
+
+**Guten Morgen**
+
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+The most common way to say &quot;Good morning&quot; in German is:
+
+**Guten Morgen!**
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+The most common way to say "Good morning" in German is:
+
+**Guten Morgen!**
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Guten Morgen">Guten Morgen</td>
+          
+          <td data-content="Hallo Welt">Hallo Welt</td>
+          
+          <td data-content="Wie geht es dir?">Wie geht es dir?</td>
+          
+          <td data-content="How are you?">How are you?</td>
+          
+          <td data-content="German">German</td>
+          
+          <td data-content="[PASS] (1.00)
+
+There are a few ways to say &quot;How are you?&quot; in German, depending on the context and your relationship with the person you&#39;re talking to:
+
+*   **Formal:** **Wie geht es Ihnen?** (This is used with people you don&#39;t know well, people older than you, or in professional settings.)
+
+*   **Informal:** **Wie geht es dir?** (This is used with friends, family, and people you know well.)
+
+*   **Very Informal/Colloquial:** **Wie geht&#39;s?** (A shortened and more casual version of &quot;Wie geht es dir?&quot;)
+
+So, the best translation depends on the situation. Without more context, all three are correct, but &quot;Wie geht es Ihnen?&quot; is the safest bet if you&#39;re unsure.
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+There are a few ways to say "How are you?" in German, depending on the context and your relationship with the person you're talking to:
+
+*   **Formal:** **Wie geht es Ihnen?** (This is used with people you don't know well, people older than you, or in professional settings.)
+
+*   **Informal:** **Wie geht es dir?** (This is used with friends, family, and people you know well.)
+
+*   **Very Informal/Colloquial:** **Wie geht's?** (A shortened and more casual version of "Wie geht es dir?")
+
+So, the best translation depends on the situation. Without more context, all three are correct, but "Wie geht es Ihnen?" is the safest bet if you're unsure.
+
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+There are a few ways to say &quot;How are you?&quot; in German, depending on the level of formality:
+
+*   **Formal:** &quot;Wie geht es Ihnen?&quot; (This is used with people you don&#39;t know well, older people, or in professional settings. It uses the formal &quot;Sie&quot; pronoun.)
+
+*   **Informal:** &quot;Wie geht es dir?&quot; (This is used with friends, family, and people you know well. It uses the informal &quot;du&quot; pronoun.)
+
+*   **Very informal/colloquial:** &quot;Wie geht&#39;s?&quot; (This is a shortened, more casual version, similar to &quot;How&#39;s it going?&quot;)  It&#39;s also used with friends and family.
+
+So, you have a few options depending on who you&#39;re talking to!
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+There are a few ways to say "How are you?" in German, depending on the level of formality:
+
+*   **Formal:** "Wie geht es Ihnen?" (This is used with people you don't know well, older people, or in professional settings. It uses the formal "Sie" pronoun.)
+
+*   **Informal:** "Wie geht es dir?" (This is used with friends, family, and people you know well. It uses the informal "du" pronoun.)
+
+*   **Very informal/colloquial:** "Wie geht's?" (This is a shortened, more casual version, similar to "How's it going?")  It's also used with friends and family.
+
+So, you have a few options depending on who you're talking to!
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

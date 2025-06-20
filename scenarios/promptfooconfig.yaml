@@ -1,0 +1,44 @@
+description: LVQH
+
+prompts:
+  - file://prompt.txt
+
+providers:
+  - google:gemini-2.0-flash
+
+scenarios:
+  - config:
+      - vars:
+          language: Spanish
+          expectedHelloWorld: 'Hola mundo'
+          expectedGoodMorning: 'Buenos días'
+          expectedHowAreYou: '¿Cómo estás?'
+      - vars:
+          language: French
+          expectedHelloWorld: 'Bonjour le monde'
+          expectedGoodMorning: 'Bonjour'
+          expectedHowAreYou: 'Comment ça va?'
+      - vars:
+          language: German
+          expectedHelloWorld: 'Hallo Welt'
+          expectedGoodMorning: 'Guten Morgen'
+          expectedHowAreYou: 'Wie geht es dir?'
+    tests:
+      - description: Translated Hello World
+        vars:
+          input: 'Hello world'
+        assert:
+          - type: contains
+            value: '{{expectedHelloWorld}}'
+      - description: Translated Good Morning
+        vars:
+          input: 'Good morning'
+        assert:
+          - type: contains
+            value: '{{expectedGoodMorning}}'
+      - description: Translated How are you?
+        vars:
+          input: 'How are you?'
+        assert:
+          - type: contains
+            value: '{{expectedHowAreYou}}'

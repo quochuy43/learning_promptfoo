@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Multishot conversation with Gemini models</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>messages</th>
+        
+        <th>question</th>
+        
+        <th>system_message</th>
+        
+        <th>[google:gemini-1.5-flash] prompts\prompt.txt: [
+{% for message in messages %}
+  {% set outer_loop = loop %}
+  {% for role, content in message %}
+  {
+    "role": "{{ role }}",
+    "content": "{{ content }}"
+  }{% if not (loop.last and outer_loop.last) %},{% endif %}
+  {% endfor %}
+{% endfor %}
+]</th>
+        
+        <th>[google:gemini-1.5-flash] prompts\history_prompt.txt: [
+  {
+    "role": "system",
+    "content": {{ system_message | dump }}
+  },
+  {% for message in messages %}
+    {% for role, content in message %}
+      {
+        "role": "{{ role }}",
+        "content": {{ content | dump }}
+      },
+    {% endfor %}
+  {% endfor %}
+  {
+    "role": "user",
+    "content": {{ question | dump }}
+  }
+]</th>
+        
+        <th>[google:gemini-2.0-flash] prompts\prompt.txt: [
+{% for message in messages %}
+  {% set outer_loop = loop %}
+  {% for role, content in message %}
+  {
+    "role": "{{ role }}",
+    "content": "{{ content }}"
+  }{% if not (loop.last and outer_loop.last) %},{% endif %}
+  {% endfor %}
+{% endfor %}
+]</th>
+        
+        <th>[google:gemini-2.0-flash] prompts\history_prompt.txt: [
+  {
+    "role": "system",
+    "content": {{ system_message | dump }}
+  },
+  {% for message in messages %}
+    {% for role, content in message %}
+      {
+        "role": "{{ role }}",
+        "content": {{ content | dump }}
+      },
+    {% endfor %}
+  {% endfor %}
+  {
+    "role": "user",
+    "content": {{ question | dump }}
+  }
+]</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="[object Object],[object Object],[object Object],[object Object]">[object Object],[object Object],[object Object],[object Object]</td>
+          
+          <td data-content="Did he create any other companies?">Did he create any other companies?</td>
+          
+          <td data-content="Answer concisely">Answer concisely</td>
+          
+          <td data-content="[PASS] (1.00)
+
+While there&#39;s no official declaration of a single &quot;favorite&quot; food, Mark Zuckerberg has been publicly photographed and reported to enjoy pizza on numerous occasions, suggesting it&#39;s a strong contender.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+While there's no official declaration of a single "favorite" food, Mark Zuckerberg has been publicly photographed and reported to enjoy pizza on numerous occasions, suggesting it's a strong contender.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Yes.  He was involved in the founding of Instagram and WhatsApp, among others.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Yes.  He was involved in the founding of Instagram and WhatsApp, among others.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+ is often cited as one of Mark Zuckerberg&#39;s favorite foods.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+ is often cited as one of Mark Zuckerberg's favorite foods.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Yes, including Meta Platforms (formerly Facebook, Inc.).
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Yes, including Meta Platforms (formerly Facebook, Inc.).
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="[object Object],[object Object],[object Object],[object Object]">[object Object],[object Object],[object Object],[object Object]</td>
+          
+          <td data-content="What is his role at Internet.org?">What is his role at Internet.org?</td>
+          
+          <td data-content="Answer concisely">Answer concisely</td>
+          
+          <td data-content="[PASS] (1.00)
+
+While there&#39;s no official declaration of a single &quot;favorite&quot; food, Mark Zuckerberg has been publicly photographed and reported to enjoy pizza on numerous occasions, suggesting it&#39;s a strong contender.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+While there's no official declaration of a single "favorite" food, Mark Zuckerberg has been publicly photographed and reported to enjoy pizza on numerous occasions, suggesting it's a strong contender.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+He&#39;s no longer directly involved.  Internet.org is now part of Meta&#39;s broader connectivity initiatives.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+He's no longer directly involved.  Internet.org is now part of Meta's broader connectivity initiatives.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+ is often cited as one of Mark Zuckerberg&#39;s favorite foods.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+ is often cited as one of Mark Zuckerberg's favorite foods.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+He was the founder and leader of Internet.org, now known as Meta Connectivity.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+He was the founder and leader of Internet.org, now known as Meta Connectivity.
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="[object Object],[object Object],[object Object],[object Object]">[object Object],[object Object],[object Object],[object Object]</td>
+          
+          <td data-content="Will he let me borrow $5?">Will he let me borrow $5?</td>
+          
+          <td data-content="Answer concisely">Answer concisely</td>
+          
+          <td data-content="[PASS] (1.00)
+
+While there&#39;s no official declaration of a single &quot;favorite&quot; food, Mark Zuckerberg has been publicly photographed and reported to enjoy pizza on numerous occasions, suggesting it&#39;s a strong contender.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+While there's no official declaration of a single "favorite" food, Mark Zuckerberg has been publicly photographed and reported to enjoy pizza on numerous occasions, suggesting it's a strong contender.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Unlikely.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Unlikely.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+ is often cited as one of Mark Zuckerberg&#39;s favorite foods.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+ is often cited as one of Mark Zuckerberg's favorite foods.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+I cannot answer that question. I do not have access to Mark Zuckerberg&#39;s intentions or finances.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+I cannot answer that question. I do not have access to Mark Zuckerberg's intentions or finances.
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

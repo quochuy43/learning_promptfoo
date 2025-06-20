@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Test ongoing chat conversation using _conversation</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>_conversation</th>
+        
+        <th>question</th>
+        
+        <th>[google:gemini-1.5-flash] prompts\conversation_prompt.txt: [
+  {% for completion in _conversation %}
+    {
+      "role": "user",
+      "content": {{ completion.input | dump | safe }}
+    },
+    {
+      "role": "assistant",
+      "content": {{ completion.output | dump | safe }}
+    },
+  {% endfor %}
+  {
+    "role": "user",
+    "content": {{ question | dump | safe }}
+  }
+]</th>
+        
+        <th>[google:gemini-2.0-flash] prompts\conversation_prompt.txt: [
+  {% for completion in _conversation %}
+    {
+      "role": "user",
+      "content": {{ completion.input | dump | safe }}
+    },
+    {
+      "role": "assistant",
+      "content": {{ completion.output | dump | safe }}
+    },
+  {% endfor %}
+  {
+    "role": "user",
+    "content": {{ question | dump | safe }}
+  }
+]</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content=""></td>
+          
+          <td data-content="Who founded Facebook?">Who founded Facebook?</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Mark Zuckerberg, along with Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes, founded Facebook.  While Zuckerberg is widely considered the primary founder and driving force, the others played significant roles in the company&#39;s early development.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Mark Zuckerberg, along with Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes, founded Facebook.  While Zuckerberg is widely considered the primary founder and driving force, the others played significant roles in the company's early development.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Mark Zuckerberg founded Facebook. He created it along with fellow Harvard University students and roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Mark Zuckerberg founded Facebook. He created it along with fellow Harvard University students and roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes.
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="[object Object],[object Object]">[object Object],[object Object]</td>
+          
+          <td data-content="Where does he live?">Where does he live?</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Mark Zuckerberg lives in Palo Alto, California.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Mark Zuckerberg lives in Palo Alto, California.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Mark Zuckerberg primarily lives in Palo Alto, California. He has a number of properties there, including his primary residence. He also owns property in other locations, such as Hawaii.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Mark Zuckerberg primarily lives in Palo Alto, California. He has a number of properties there, including his primary residence. He also owns property in other locations, such as Hawaii.
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="[object Object],[object Object],[object Object]">[object Object],[object Object],[object Object]</td>
+          
+          <td data-content="Which state is that in?">Which state is that in?</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Palo Alto, California is in the state of **California**.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Palo Alto, California is in the state of **California**.
+
+
+Pass Reason: No assertions</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Palo Alto is in **California**.
+
+
+Pass Reason: No assertions">[PASS] (1.00)
+
+Palo Alto is in **California**.
+
+
+Pass Reason: No assertions</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

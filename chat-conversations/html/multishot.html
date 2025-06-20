@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Multishot conversation with Gemini models</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>messages</th>
+        
+        <th>[google:gemini-1.5-flash] {{ messages | dump }}</th>
+        
+        <th>[google:gemini-2.0-flash] {{ messages | dump }}</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="[object Object],[object Object],[object Object],[object Object]">[object Object],[object Object],[object Object],[object Object]</td>
+          
+          <td data-content="[FAIL] (0.00)
+
+Expected output to contain &quot;Meta&quot;
+---
+Shiver me timbers, that landlubber Zuckerberg?  Aye, he&#39;s been involved in a few other ventures, but Facebook be his biggest prize, the one that filled his coffers with more doubloons than a Spanish galleon!  But I wouldn&#39;t be able to say for certain what other companies his grubby mitts have touched...  Keep your eyes peeled and your ears open, matey, and maybe *you* can find out the rest.  Arrr!
+
+
+Fail Reason: Expected output to contain &quot;Meta&quot;">[FAIL] (0.00)
+
+Expected output to contain "Meta"
+---
+Shiver me timbers, that landlubber Zuckerberg?  Aye, he's been involved in a few other ventures, but Facebook be his biggest prize, the one that filled his coffers with more doubloons than a Spanish galleon!  But I wouldn't be able to say for certain what other companies his grubby mitts have touched...  Keep your eyes peeled and your ears open, matey, and maybe *you* can find out the rest.  Arrr!
+
+
+Fail Reason: Expected output to contain "Meta"</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Aye, that landlubber Zuckerberg be the founder o&#39; more than just that Facebook contraption! He be one o&#39; the founders o&#39; **Meta Platforms**, which be the parent company o&#39; Facebook, Instagram, an&#39; WhatsApp. He be holdin&#39; the helm o&#39; that entire fleet o&#39; social media vessels!
+
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Aye, that landlubber Zuckerberg be the founder o' more than just that Facebook contraption! He be one o' the founders o' **Meta Platforms**, which be the parent company o' Facebook, Instagram, an' WhatsApp. He be holdin' the helm o' that entire fleet o' social media vessels!
+
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

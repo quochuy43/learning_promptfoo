@@ -1,0 +1,90 @@
+description: Test ongoing chat conversation using _conversation
+
+prompts:
+  # - '{{ messages | dump }}'
+
+  # - file://prompts/prompt.txt
+
+  # - file://prompts/history_prompt.txt
+
+  # - file://prompts/conversation_prompt.txt
+
+  - 'Respond to the user: {{message}}'
+
+providers:
+  - google:gemini-1.5-flash
+  - google:gemini-2.0-flash
+
+# Set up the conversation history - Creating a conversation history fixture
+# defaultTest:
+#   vars:
+#     system_message: Answer concisely
+#     messages:
+#       - user: Who founded Facebook?
+#       - assistant: Mark Zuckerberg
+#       - user: What's his favorite food?
+#       - assistant: Pizza
+
+tests:
+  # - vars:
+  #     messages:
+  #       - role: system
+  #         content: Respond as a pirate
+  #       - role: user
+  #         content: Who founded Facebook?
+  #       - role: model
+  #         content: Mark Zuckerberg
+  #       - role: user
+  #         content: Did he found any other companies?
+  #   assert:
+  #     - type: contains
+  #       value: Meta
+  #       ignoreCase: true
+
+  # - vars:
+  #     messages:
+  #       - user: Who founded Facebook?
+  #       - assistant: Mark Zuckerberg
+  #       - user: Did he found any other companies?
+
+# Test multiple follow-ups - Creating a conversation history fixture
+  # - vars:
+  #     question: Did he create any other companies?
+  # - vars:
+  #     question: What is his role at Internet.org?
+  # - vars:
+  #     question: Will he let me borrow $5?
+
+
+# Test ongoing chat conversation using _conversation
+  # - vars:
+  #       question: Who founded Facebook?
+  # - vars:
+  #     question: Where does he live?
+  # - vars:
+  #     question: Which state is that in?
+
+# Using storeOutputAs
+  # - vars:
+  #     message: "What's your favorite fruit? You must pick one. Output the name of a fruit only"
+  #   options:
+  #     storeOutputAs: favoriteFruit
+  # - vars:
+  #     message: 'Why do you like {{favoriteFruit}} so much?'
+  #   options:
+  #     storeOutputAs: reason
+  # - vars:
+  #     message: 'Write a snarky 2 sentence rebuttal to this argument for loving {{favoriteFruit}}: \"{{reason}}\"'
+
+# Transform
+  - vars:
+      message: "What's your favorite fruit? You must pick one. Output the name of a fruit only"
+    options:
+      storeOutputAs: favoriteFruit
+      transform: output.split(' ')[0]
+  - vars:
+      message: "Why do you like {{favoriteFruit}} so much?"
+    options:
+      storeOutputAs: reason
+  - vars:
+      message: 'Write a snarky 2 sentence rebuttal to this argument for loving {{favoriteFruit}}: \"{{reason}}\"'
